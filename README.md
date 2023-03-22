@@ -8,7 +8,7 @@
 4. `mkdir -p var/qiq/template/Page; touch var/qiq/template/Page/Index.php` を実行する
 5. `MyVendor.MyProject/src/Module` に `HtmlModule` を設置して `QiqModule` をインストールする
 6. `MyVendor.MyProject/src/Module` に `ProdModule` を設置する ※ [参考：プロダクション > アプリケーションのProdModule](https://bearsunday.github.io/manuals/1.0/ja/production.html)
-7. `HtmlModule` に `QiqModule` の本番環境設定を追加する
+7. `ProdModule` で `QiqErrorModule` および `QiqProdModule` をインストールする
 8. `composer.json` の `autoload > psr-4` の下に `"Qiq\\Helper\\": "var/qiq/helper/"` を追加
 9. `composer dump-autoload` を実行
 10. `./vendor/bin/bear.compile 'MyVendor\MyProject' prod-html-app ./` でコンパイルできることを確認する
